@@ -1,9 +1,9 @@
 export default class Car{
   constructor(data){
-    this.make = data.make
-    this.model = data.model
-    this.year = data.year
-    this.color = data.color
+    this.make = data.make || ''
+    this.model = data.model || ''
+    this.year = data.year || ''
+    this.color = data.color || ''
   }
 
   get Template(){

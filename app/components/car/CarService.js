@@ -15,4 +15,9 @@ export default class CarService{
   get Cars(){
     return _cars.map(car => new Car(car))
   }
+
+  addCar(newCar){
+    _cars.push(new Car(newCar))
+  }
+
 }

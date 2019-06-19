@@ -12,6 +12,17 @@
     <div id="cars" class="row">
       
     </div>
+    <form onsubmit="app.controllers.carController.addCar(event)">
+      <label for="make">Make</label>
+      <input type="text" name="make" placeholder="Make" required>
+      <label for="model">Model</label>
+      <input type="text" name="model" required>
+      <label for="year">Year</label>
+      <input type="number" name="year" required>
+      <label for="color">Color</label>
+      <input type="text" name="color" required>
+      <button type="submit" class="btn btn-primary">Add Car</button>
+    </form>
   </div>
   <script src="app/main.js" type="module"></script>
 </body>

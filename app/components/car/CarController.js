@@ -11,7 +11,6 @@ function drawCars(){
     template += car.Template
   })
   carsElem.innerHTML = template
-
 }
 
 export default class CarController{
@@ -19,4 +18,21 @@ export default class CarController{
     console.log("car controller works")
     drawCars()
   }
+
+  addCar(e){
+    e.preventDefault()
+    let form = e.target
+
+    let newCar = {
+      make: form.make.value,
+      model: form.model.value,
+      year: form.year.value,
+      color: form.color.value
+    }
+
+    _carService.addCar(newCar)
+    form.reset()
+    drawCars()
+  }
+
 }
