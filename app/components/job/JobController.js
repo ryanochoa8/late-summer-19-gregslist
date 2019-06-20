@@ -8,5 +8,15 @@ export default class JobController{
   }
   addJob(e){
     e.preventDefault()
+  let form = e.target
+
+  let newJob = {
+    title: form.title.value,
+    salary: form.salary.value,
+    company: form.company.value,
+    location: form.location.value
+  }
+  _jobService.addJob(newJob)
+  form.reset()
   }
 }
