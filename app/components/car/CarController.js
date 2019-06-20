@@ -13,9 +13,11 @@ function drawCars(){
   carsElem.innerHTML = template
 }
 
+
 export default class CarController{
   constructor(){
     console.log("car controller works")
+    _carService.addSubscriber("cars", drawCars)
     drawCars()
   }
 
@@ -32,7 +34,6 @@ export default class CarController{
 
     _carService.addCar(newCar)
     form.reset()
-    drawCars()
   }
 
 }
