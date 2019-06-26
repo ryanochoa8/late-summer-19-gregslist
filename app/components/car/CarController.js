@@ -38,4 +38,12 @@ export default class CarController {
     form.reset()
   }
 
+  placeBid(carId) {
+    _carService.placeBid(carId)
+  }
+
+  purchase(carId) {
+    _carService.purchase(carId)
+  }
+
 }

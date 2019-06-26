@@ -27,6 +27,31 @@ export default class CarService {
     console.log("car service works", this.Cars)
   }
 
+  purchase(carId) {
+    _carApi.delete(carId)
+      .then(() => {
+        let cars = this.Cars
+        let index = cars.findIndex(c => c._id == carId)
+        cars.splice(index, 1)
+        setState('cars', cars)
+      })
+      .catch(e => console.error(e))
+  }
+
+  placeBid(carId) {
+    let carToUpdate = this.Cars.find(c => c._id == carId)
+    if (!carToUpdate) return alert('we can\'t find that car. Sorry.')
+    carToUpdate.price *= 1.1
+    _carApi.put(carId, carToUpdate)
+      .then(res => {
+        let cars = this.Cars
+        let index = cars.findIndex(c => c._id == carId)
+        cars[index].price = carToUpdate.price
+        setState('cars', cars)
+      })
+      .catch(e => console.error(e))
+  }
+
   addSubscriber(propName, fn) {
     _subscribers[propName].push(fn)
   }

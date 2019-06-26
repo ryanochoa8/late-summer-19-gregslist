@@ -18,7 +18,7 @@ export default class Car {
           <h4>Make: ${this.make}</h4>
           <h4>Model: ${this.model}</h4>
           <h4>Year: ${this.year}</h4>
-          <p>Price: ${this.price}</p>
+          <p>Price: ${this.price.toFixed(0)}</p>
           <p>${this.description}</p>
         </div>
         <div class="card-footer">

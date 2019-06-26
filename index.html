@@ -19,23 +19,29 @@
       <input type="text" name="model" required>
       <label for="year">Year</label>
       <input type="number" name="year" required>
-      <label for="color">Color</label>
-      <input type="text" name="color" required>
+      <label for="price">Price</label>
+      <input type="number" name="price" required>
+      <label for="imgUrl">Image</label>
+      <input type="text" name="imgUrl" required>
+      <label for="description">Description</label>
+      <textarea name="description" cols="30" rows="10"></textarea>
       <button type="submit" class="btn btn-primary">Add Car</button>
     </form>
     <div id="cars" class="row"></div>
-    <div class="row" id="jobs"></div>
-    <!-- <form onsubmit="app.controllers.jobController.addJob(event)">
-      <label for="title">Title:</label>
-      <input type="text" name="title">
-      <label for="salary">Salary:</label>
-      <input type="number" name="salary">
+    <form onsubmit="app.controllers.jobController.addJob(event)">
       <label for="company">Company:</label>
       <input type="text" name="company">
-      <label for="location">Location:</label>
-      <input type="text" name="location">
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" name="jobTitle">
+      <label for="hours">Hours:</label>
+      <input type="number" name="hours">
+      <label for="rate">Rate:</label>
+      <input type="number" name="rate">
       <button type="submit" class="btn btn-primary">Add Job</button>
-    </form> -->
+      <label for="description">Description</label>
+      <textarea name="description" cols="30" rows="10"></textarea>
+    </form>
+    <div class="row" id="jobs"></div>
 
   </div>
 
